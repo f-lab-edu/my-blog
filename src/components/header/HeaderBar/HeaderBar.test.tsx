@@ -38,12 +38,12 @@ describe("HeaderBar", () => {
       expect(userName).toBeInTheDocument();
     });
 
-    it("메뉴 드롭다운이 보여야한다.", () => {
+    it("메뉴 드롭다운 버튼이 보여야한다.", () => {
       renderHeaderBar();
 
-      const menu = screen.getByTestId("nav-menu-dropdown");
+      const menuButton = screen.getByLabelText("menu button");
 
-      expect(menu).toBeInTheDocument();
+      expect(menuButton).toBeInTheDocument();
     });
 
     context("유저 이름을 클릭하면", () => {
